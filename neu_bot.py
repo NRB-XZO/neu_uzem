@@ -13,18 +13,6 @@ import pyautogui
 import random
 import sys
 name = " en ar bi"
-def record():
-    r = sr.Recognizer()
-    with sr.Microphone() as source:
-        audio = r.listen(source)
-        voice = ""
-        try:
-            voice = r.recognize_google(audio, language="tr-TR")
-        except sr.UnknownValueError:
-            print("Anlayamadım")
-        except sr.RequestError:
-            print("Sistem çalışmıyor")
-        return voice
 saat = pyautogui.prompt(text="Ders saat kaçta ? (başında sıfır kullanmadan)",title="NRB SECURİTY",default="")
 dakika = pyautogui.prompt(text="Ders kaçıncı dakikada ? (başında sıfır kullanmadan",title="NRB SECURİTY",default="")
 url = pyautogui.prompt(text="Olası bir soruna karşın açık sayfanın urlsini giriniz",title="NRB SECURİTY",default="")
