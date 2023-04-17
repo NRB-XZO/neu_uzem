@@ -3,7 +3,6 @@
 #
 import speech_recognition as sr
 from python_imagesearch.imagesearch import imagesearch
-from playsound import playsound
 from gtts import gTTS
 import os
 from time import sleep
@@ -26,13 +25,6 @@ def record():
         except sr.RequestError:
             print("Sistem çalışmıyor")
         return voice
-def speak(string):
-    tts = gTTS(string,lang="tr")
-    rand = random.randint(1,1000)
-    file = "audio-"+str(rand)+".mp3"
-    tts.save(file)
-    playsound(file)
-    os.remove(file)
 saat = pyautogui.prompt(text="Ders saat kaçta ? (başında sıfır kullanmadan)",title="NRB SECURİTY",default="")
 dakika = pyautogui.prompt(text="Ders kaçıncı dakikada ? (başında sıfır kullanmadan",title="NRB SECURİTY",default="")
 url = pyautogui.prompt(text="Olası bir soruna karşın açık sayfanın urlsini giriniz",title="NRB SECURİTY",default="")
