@@ -3,7 +3,6 @@
 #
 import speech_recognition as sr
 from python_imagesearch.imagesearch import imagesearch
-from gtts import gTTS
 import os
 from time import sleep
 from pyautogui import leftClick
